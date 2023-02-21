@@ -1,0 +1,26 @@
+{
+  "name": "pages-functions-with-wasm-demo",
+  "version": "1.0.0",
+  "description": "A demo app that exemplifies wasm module imports in Pages Functions",
+  "scripts": {
+    "dev": "nodemon --watch app-web/src --ext \"html,scss,js,mjs,ts,json\" -x \"yarn build:app-web && npx wrangler pages dev public/dist\"",
+    "build:app-web": "rm -rf public/dist && parcel build app-web/src/index.html --dist-dir public/dist",
+    "build:app-rust": "cd app-rust && wasm-pack build",
+    "lint": "eslint .",
+    "publish:to-pages": "yarn build:app-web && npx wrangler pages publish public/dist"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230228.0",
+    "@parcel/transformer-sass": "2.8.3",
+    "buffer": "^6.0.3",
+    "eslint": "~4.19.1",
+    "nodemon": "^2.0.20",
+    "parcel": "2.8.3",
+    "process": "^0.11.10",
+    "typescript": "^4.9.5",
+    "wrangler": "^2.13.0"
+  },
+  "dependencies": {
+    "globe.gl": "^2.27.1"
+  }
+}
