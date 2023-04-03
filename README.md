@@ -1,6 +1,6 @@
 # Pages Functions with WebAssembly Demo
 
-This is a demo application that exemplifies the use of Wasm module imports inside ⚡️[Pages Functions](https://developers.cloudflare.com/pages/platform/functions/) code. Head over to our [announcement]()(Not Yet Available) blog post to read more about it, or play with the live demo [here](https://pages-with-wasm-demo.pages.dev/).
+This is a demo application that exemplifies the use of Wasm module imports inside ⚡️[Pages Functions](https://developers.cloudflare.com/pages/platform/functions/) code. Head over to our [announcement](https://blog.cloudflare.com/pages-functions-with-webassembly/) blog post to read more about it, or play with the live demo [here](https://pages-with-wasm-demo.pages.dev/).
 
 The application computes the distance in kilometers on the surface of Earth between your current location (based on the geo coordinates of the incoming request) and any other point on the globe, each time you click on the globe's surface. The code that performs the actual high-performance distance calculation is written in Rust, but is invoked from within a Pages Function via the Wasm module import mechanism. 
 
